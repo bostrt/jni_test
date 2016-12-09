@@ -1,0 +1,12 @@
+set breakpoint pending on
+set width 0
+set height 0
+set verbose off
+handle all nostop
+break malloc
+commands 1
+    backtrace
+    continue
+end
+run
+		

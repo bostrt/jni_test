@@ -1,0 +1,7 @@
+
+# javac Hello.java
+# javah -jni Hello
+# gcc -fPIC -I. -I/usr/lib/jvm/java-1.8.0-openjdk/include/ -I/usr/lib/jvm/java-1.8.0-openjdk/include/linux/ -o libhello_native.so -shared Hello.c
+# java -XX:NativeMemoryTracking=detail -Djava.library.path=. Hello
+
+# jcmd {PID} VM.native_memory detail
